@@ -11,7 +11,7 @@ const business = {
     category: 'Italian',
     rating: 4.5,
     reviewCount: 90
-}
+} // restaurant data, will update with API information later
 
 class Business extends React.Component {
     render(){
@@ -40,6 +40,6 @@ class Business extends React.Component {
             </div>
         )
     }
-}
+} // Individual Business component, flexes image & restaurant datal
 
 export default Business;
