@@ -17,7 +17,8 @@ class SearchBar extends React.Component {
     }// returns array of list items 
 
     render() {
-        return (<div className="SearchBar">
+        return (
+        <div className="SearchBar">
             <div className="SearchBar-sort-options">
                 <ul>
                 {this.renderSortByOptions()}
@@ -30,7 +31,8 @@ class SearchBar extends React.Component {
             <div className="SearchBar-submit">
                 <a>Let's Go</a>
             </div>
-        </div>)
+        </div>
+        );
     }
 }
 
