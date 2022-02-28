@@ -21,10 +21,10 @@ function App() {
   return (
     <div class="App">
       <h1>ravenous</h1>
-      <SearchBar />
+      <SearchBar /> { /* instance of SearchBar component */}
       <BusinessList businesses = { businesses } />
     </div>
-  );
+  ); // main App component
 }
 
 export default App;

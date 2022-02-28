@@ -4,6 +4,7 @@ Business {
     justify-content: space-between;
     width: 16.66rem;
     margin: 0 .5rem 2.3rem .5rem;
+    max-width: fit-content;
   }
   
   .Business .image-container {
