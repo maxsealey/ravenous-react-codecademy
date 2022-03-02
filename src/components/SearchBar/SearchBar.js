@@ -41,6 +41,14 @@ class SearchBar extends React.Component {
         }) 
     }// returns array of list items, renders each item 
 
+    handleTermChange(e) { // event gets passed in as argument
+        this.setState({term:e.target.value})
+    } // event handler for change of search term
+
+    handleLocationChange(e) {
+        this.setState({location:e.target.value})
+    } // event handler for change in location
+
     render() {
         return (
         <div className="SearchBar">
