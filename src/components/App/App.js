@@ -18,13 +18,21 @@ const business = {
 const businesses = [business, business, business, business, business, business] // array of business objects
 
 function App() {
-  return (
-    <div class="App">
-      <h1>ravenous</h1>
-      <SearchBar /> { /* instance of SearchBar component */}
-      <BusinessList businesses = { businesses } />
-    </div>
-  ); // main App component
+  class App extends React.Component {
+    searchYelp(term,location,sortBy) {
+      console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`)
+    }
+
+    render() {
+      return (
+        <div className="App">
+          <h1>ravenous</h1>
+          <SearchBar />
+          <BusinessList businesses={businesses} />
+        </div>
+      );
+    }
+  }
 }
 
 export default App;
