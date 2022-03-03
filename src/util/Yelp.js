@@ -12,16 +12,16 @@ const Yelp = {
             if (jsonResponse.businesses) { // checks for businesses key, valid response from API
                 return jsonResponse.businesses.map((business)=> {
                     return {
-                        id,
-                        imageSrc,
-                        name,
-                        address,
-                        city,
-                        state,
-                        zipCode,
-                        category,
-                        rating,
-                        reviewCount
+                        id:business.id,
+                        imageSrc:'',
+                        name:business.name,
+                        address:business.location.address1,
+                        city:business.location.city,
+                        state:business.location.state,
+                        zipCode:business.location.zip_code,
+                        category:business.categories[0].alias,
+                        rating:business.rating,
+                        reviewCount: business.review_count
                     }
                 })
             }
