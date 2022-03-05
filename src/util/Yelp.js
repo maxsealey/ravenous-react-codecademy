@@ -10,20 +10,18 @@ const Yelp = {
         })
         .then((jsonResponse)=> {
             if (jsonResponse.businesses) { // checks for businesses key, valid response from API
-                return jsonResponse.businesses.map((business)=> {
-                    return {
-                        id:business.id,
-                        imageSrc:business.image_url,
-                        name:business.name,
-                        address:business.location.address1,
-                        city:business.location.city,
-                        state:business.location.state,
-                        zipCode:business.location.zip_code,
-                        category:business.categories[0].alias,
-                        rating:business.rating,
-                        reviewCount: business.review_count
-                    }
-                })
+                return jsonResponse.businesses.map((business)=> ({
+                    id:business.id,
+                    imageSrc:business.image_url,
+                    name:business.name,
+                    address:business.location.address1,
+                    city:business.location.city,
+                    state:business.location.state,
+                    zipCode:business.location.zip_code,
+                    category:business.categories[0].title,
+                    rating:business.rating,
+                    reviewCount: business.review_count
+                }))
             }
         })
     }
